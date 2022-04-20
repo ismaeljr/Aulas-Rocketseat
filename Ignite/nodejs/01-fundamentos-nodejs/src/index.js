@@ -2,9 +2,11 @@ const { response } = require('express');
 const { query } = require('express');
 const { application } = require('express');
 const express = require('express');
+const { json } = require('express/lib/response');
 
 const app = express();
 
+app.use(express.json());
 
 // GET - Buscar uma informação dentro do servidor
 // Query Params => Paginação / Filtro
